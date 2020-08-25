@@ -1,0 +1,61 @@
+<h1> This is the poker bot generator </h1>
+
+<a href = "{% url 'about' %}"> About poker statistics </a>
+
+<h2> Enter your hole cards: </h2>
+
+<form action = "{% url 'answer' %}">
+	Card 1
+	<select name = "card_one_number"> 
+		<option value = "2">2</option>
+		<option value = "3">3</option>
+		<option value = "4">4</option>
+		<option value = "5">5</option>
+		<option value = "6">6</option>
+		<option value = "7">2</option>
+		<option value = "8">8</option>
+		<option value = "9">9</option>
+		<option value = "10">10</option>
+		<option value = "J">J</option>
+		<option value = "Q">Q</option>
+		<option value = "K">K</option>
+		<option value = "A">A</option>
+	</select>
+	<select name = "card_one_suit"> 
+		<option value = "spade">Spade</option>
+		<option value = "club">Club</option>
+		<option value = "heart">Heart</option>
+		<option value = "diamond">Diamond</option>
+	</select>
+
+	<br> <br> <br>
+
+	Card 2
+	<select name = "card_two_number"> 
+		<option value = "2">2</option>
+		<option value = "3">3</option>
+		<option value = "4">4</option>
+		<option value = "5">5</option>
+		<option value = "6">6</option>
+		<option value = "7">7</option>
+		<option value = "8">8</option>
+		<option value = "9">9</option>
+		<option value = "10">10</option>
+		<option value = "J">J</option>
+		<option value = "Q">Q</option>
+		<option value = "K">K</option>
+		<option value = "A">A</option>
+	</select>
+	
+	<select name = "card_two_suit"> 
+		<option value = "spade">Spade</option>
+		<option value = "club">Club</option>
+		<option value = "heart">Heart</option>
+		<option value = "diamond">Diamond</option>
+	</select>
+
+	<input type="submit" name="holecards">
+	
+</form>
+
+<!-- There are 1326 ways to deal 2 cards. This is equal to (52*51)/2 (as you could get Ace spades and King spades or King spades then Ace spades - 52*51 takes counts both AceSpades/KingSpades or KingSpades/AceSpades when in reality it's only one) or its equal to 52C2. --> 
